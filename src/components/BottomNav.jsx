@@ -71,37 +71,37 @@ export default function BottomNav() {
 
   // Mobile FAB + vertical menu
   const mobileNav = (
-  <div className="md:hidden fixed bottom-8 right-4 z-50 flex flex-col items-end gap-3">
-    {/* vertical icon list */}
-    <div
-      className={`flex flex-col items-end gap-3 transition-all duration-300
-                  ${open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
-    >
-      {sections.map(({ id, Icon }) => (
-        <button
-          key={id}
-          onClick={() => scrollTo(id)}
-          className={`w-11 h-11 flex items-center justify-center rounded-full
-                      bg-white/15 backdrop-blur-md border border-white/20
-                      text-white transition hover:bg-white/25
-                      ${active === id ? "ring-2 ring-white/80" : ""}`}
-        >
-          <Icon size={20} />
-        </button>
-      ))}
-    </div>
+    <div className="md:hidden fixed bottom-8 right-4 z-50 flex flex-col items-start gap-3">
+      {/* Menu items */}
+      <div
+        className={`flex flex-col items-start gap-3 transition-all duration-300
+                    ${open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
+      >
+        {sections.map(({ id, Icon }) => (
+          <button
+            key={id}
+            onClick={() => scrollTo(id)}
+            className={`w-11 h-11 flex items-center justify-center rounded-full
+                        bg-white/15 backdrop-blur-md border border-white/20
+                        text-white transition hover:bg-white/25
+                        ${active === id ? "ring-2 ring-white/80" : ""}`}
+          >
+            <Icon size={20} />
+          </button>
+        ))}
+      </div>
 
-    {/* main FAB */}
-    <button
-      onClick={() => setOpen(!open)}
-      className="w-14 h-14 flex items-center justify-center rounded-full
-                 bg-white/20 backdrop-blur-xl border border-white/25
-                 text-white shadow-lg active:scale-95 transition"
-    >
-      {open ? <X size={26} /> : <Menu size={26} />}
-    </button>
-  </div>
-);
+      {/* Floating Action Button */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-14 h-14 flex items-center justify-center rounded-full
+                   bg-white/20 backdrop-blur-xl border border-white/25
+                   text-white shadow-lg active:scale-95 transition"
+      >
+        {open ? <X size={26} /> : <Menu size={26} />}
+      </button>
+    </div>
+  );
 
   return (
     <>
