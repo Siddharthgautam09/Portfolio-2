@@ -29,7 +29,8 @@ const Hero = () => {
         </h3>
 
         <h3
-          className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-tight transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer"
+          className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-tight transition-all duration-300 ease-in-out 
+          origin-left hover:scale-110 cursor-pointer"
           style={{
             color: 'rgb(255, 255, 255)',
             fontFamily: 'Albert Sans, sans-serif',

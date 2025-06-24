@@ -1,3 +1,6 @@
 .bg-transition {
   transition: backdrop-filter 0.7s ease, transform 0.7s ease, opacity 0.7s ease;
 }
+html{
+scroll-behavior: smooth
+}
