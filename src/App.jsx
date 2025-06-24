@@ -6,6 +6,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import BottomNav from './components/BottomNav';
 
 function App() {
   const heroRef = useRef(null);
@@ -45,7 +46,7 @@ function App() {
 />
 
       {/* Dark Overlay */}
-      <div className="fixed inset-0 bg-black/25 z-0" />
+      <div className="fixed inset-0 bg-black/60 z-0" />
 
       {/* Page Content */}
       <div className="relative z-10">
@@ -56,6 +57,8 @@ function App() {
         <About />
         <Projects />
         <Contact />
+        <Navbar />
+        <BottomNav />
         <Footer />
       </div>
     </div>

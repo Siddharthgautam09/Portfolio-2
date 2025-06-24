@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
+    <section id="hero" className="min-h-screen flex items-center">
+      {/* ... */}
+
     <div className="relative w-full min-h-screen">
       <motion.div
         initial={{ opacity: 0, y: 80 }}
@@ -67,6 +70,7 @@ const Hero = () => {
         </div>
       </motion.div>
     </div>
+    </section>
   );
 };
 
