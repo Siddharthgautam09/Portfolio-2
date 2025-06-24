@@ -11,7 +11,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: 'easeOut' }}
-        className="z-10 flex flex-col justify-start gap-[2vh] px-6 sm:px-10 md:px-[11%] pt-[40vh]"
+        className="z-10 flex flex-col justify-start gap-[2vh] px-6 sm:px-10 md:px-[11%] pt-[30vh]"
         style={{
           outline: 'none',
           opacity: 1,
