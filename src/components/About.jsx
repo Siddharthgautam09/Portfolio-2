@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative w-full min-h-screen px-6 sm:px-12 md:px-[11%] pt-24 pb-16 backdrop-blur-xl transition-all duration-500"
+      className="relative w-full min-h-screen px-6 sm:px-12 md:px-[11%] pt-24 pb-16"
     >
       {/* Heading */}
       <h2
