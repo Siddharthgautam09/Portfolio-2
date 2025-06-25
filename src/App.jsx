@@ -11,7 +11,7 @@ import BottomNav from './components/BottomNav';
 import { useBgBlur } from './hooks/useBgBlur';
 
 function App() {
-  const blur = useBgBlur(0.25); // 👈 Trigger blur after 25% scroll
+  const blur = useBgBlur(0.40); // 👈 Trigger blur after 25% scroll
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
