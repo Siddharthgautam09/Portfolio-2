@@ -96,27 +96,35 @@ export default function BottomNav() {
       </div>
 
       {/* Floating Action Button */}
-      <button
-        onClick={() => setOpen(!open)}
-        className={`w-14 h-14 flex items-center justify-center rounded-full
-                   bg-white/20 backdrop-blur-xl border border-white/25
-                   text-white shadow-lg transition-all duration-300 ease-out
-                   hover:bg-white/30 hover:scale-110 active:scale-95
-                   ${open ? "rotate-180" : "rotate-0"}`}
-      >
-        <div className="relative">
-          <Menu 
-            size={26} 
-            className={`absolute inset-0 transition-all duration-300 ease-out
-                       ${open ? "opacity-0 rotate-90 scale-75" : "opacity-100 rotate-0 scale-100"}`} 
-          />
-          <X 
-            size={26} 
-            className={`absolute inset-0 transition-all duration-300 ease-out
-                       ${open ? "opacity-100 rotate-0 scale-100" : "opacity-0 rotate-90 scale-75"}`} 
-          />
-        </div>
-      </button>
+<button
+  onClick={() => setOpen(!open)}
+  /* 56 × 56 circle that never rotates */
+  className="relative w-14 h-14 flex items-center justify-center rounded-full
+             bg-white/20 backdrop-blur-xl border border-white/25
+             text-white shadow-lg transition-all duration-300 ease-out
+             hover:bg-white/30 hover:scale-110 active:scale-95"
+>
+  {/* Hamburger */}
+  <Menu
+    size={26}
+    className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+                transition-all duration-300 ease-out
+                ${open
+                  ? "opacity-0 rotate-90 scale-75"
+                  : "opacity-100 rotate-0 scale-100"}`}
+  />
+
+  {/* Cross */}
+  <X
+    size={26}
+    className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+                transition-all duration-300 ease-out
+                ${open
+                  ? "opacity-100 rotate-0 scale-100"
+                  : "opacity-0 rotate-90 scale-75"}`}
+  />
+</button>
+
     </div>
   );
 
