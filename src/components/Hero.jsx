@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { IoIosFlag } from 'react-icons/io';
 
 const Hero = () => {
   return (
@@ -10,11 +12,6 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
           className="z-10 flex flex-col justify-start gap-[2vh] px-6 sm:px-10 md:px-[11%] pt-[30vh]"
-          style={{
-            outline: 'none',
-            opacity: 1,
-            transform: 'none',
-          }}
         >
           <h3
             className="text-4xl sm:text-4xl md:text-6xl font-semibold"
@@ -42,29 +39,42 @@ const Hero = () => {
           {/* Contact Links */}
           <div className="mt-8 w-full flex justify-left">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-14 text-white text-lg sm:text-xl lg:text-2xl font-semibold text-left">
+              {/* Email */}
               <a
                 href="mailto:siddharth.mtc09@gmail.com"
-                className="hover:text-yellow-400 transition duration-200"
+                className="hover:text-yellow-400 transition duration-200 flex items-center gap-3"
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <FaEnvelope className="text-yellow-400" />
                 siddharth.mtc09@gmail.com
               </a>
+
+              {/* Phone */}
               <a
                 href="tel:+91989249092"
-                className="hover:text-yellow-400 transition duration-200"
+                className="hover:text-yellow-400 transition duration-200 flex items-center gap-3"
               >
+                <FaPhone className="text-yellow-400" />
                 +91 98924 9092
               </a>
+
+              {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/sid-gautam09/"
-                className="hover:text-yellow-400 transition duration-200"
+                className="hover:text-yellow-400 transition duration-200 flex items-center gap-3"
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <FaLinkedin className="text-yellow-400" />
                 linkedin.com/in/sid-gautam09
               </a>
-              <span className="text-white">India</span>
+
+              {/* Location */}
+              <span className="flex items-center gap-2 text-white">
+                <IoIosFlag className="text-yellow-400" />
+                India
+              </span>
             </div>
           </div>
         </motion.div>
