@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BottomNav from './components/BottomNav';
 import { useBgBlur } from './hooks/useBgBlur';
+import Skills from './components/Skills';
 
 function App() {
   const blur = useBgBlur(0.25); // 👈 Trigger blur after 25% scroll
@@ -40,6 +41,7 @@ function App() {
         <Navbar />
         <Hero />
         <About />
+        <Skills/>
         <Projects />
         <Contact />
         <BottomNav />
