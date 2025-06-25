@@ -8,13 +8,18 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BottomNav from './components/BottomNav';
+import { useBgBlur } from './hooks/useBgBlur';
 
 function App() {
+  const blur = useBgBlur(0.25); // 👈 Trigger blur after 25% scroll
+
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
-      {/* 🔳 Fixed Background Image */}
+      {/* 🔳 Fixed Background Image with Blur on Scroll */}
       <div
-        className="fixed inset-0 bg-cover bg-no-repeat bg-center z-0 pointer-events-none"
+        className={`fixed inset-0 bg-cover bg-no-repeat bg-center z-0 pointer-events-none transition-all duration-500 ${
+          blur ? 'backdrop-blur-md' : ''
+        }`}
         style={{
           backgroundImage:
             "url('https://framerusercontent.com/images/t6jT5g2xsOV9jDFck9iJYVPNmLw.jpg?scale-down-to=2048')",
@@ -23,10 +28,14 @@ function App() {
         }}
       />
 
-      {/* 🌓 Dark Overlay for contrast */}
-      <div className="fixed inset-0 bg-black/60 z-0" />
+      {/* 🌓 Dark Overlay with optional blur */}
+      <div
+        className={`fixed inset-0 bg-black/40 z-0 transition-all duration-500 ${
+          blur ? 'backdrop-blur-sm' : ''
+        }`}
+      />
 
-      {/* Page Content */}
+      {/* 🔼 Page Content */}
       <div className="relative z-10">
         <Navbar />
         <Hero />
